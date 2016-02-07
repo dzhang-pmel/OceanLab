@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+        <meta charset="utf-8" />
+        <title>10 Primeiros Passos</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/iuryt">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="/">OceanLab </a></h1>
+                <nav><ul>
+    
+                        <li><a href="/pages/contato.html">Contato</a></li>
+    
+                        <li><a href="/pages/sobre.html">Sobre</a></li>
+                    <li><a href="/category/0-introducao.html">0 - Introdução</a></li>
+                    <li class="active"><a href="/category/1-instalacao.html">1 - Instalação</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/10-primeiros-passos.html" rel="bookmark"
+           title="Permalink to 10 Primeiros Passos">10 Primeiros Passos</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <span>Dom 07 fevereiro 2016</span>
+
+</footer><!-- /.post-info -->      <h2>Enthought Canopy</h2>
+<p>O ambiente de desenvolvimento das rotinas apresentadas neste site será o <strong>Enthought Canopy</strong>. Este software facilita em muito a aprendizagem por ser mais <em>user friendly</em>, possuir atalhos de teclado bem úteis e facilitar a instalação de alguns pacotes, como o <strong>NetCDF4</strong>. </p>
+<h2>Licença</h2>
+<p>Este software é gratuito para uso acadêmico, então, para baixá-lo é preciso primeiro <a href="https://store.enthought.com/accounts/login/">criar uma conta</a>, informando que instituição acadêmica você está vinculado e utilizar seu email acadêmico. 
+Alguns emails acadêmicos, como o @usp.br, são automaticamente vinculados a uma licença acadêmica, se este não for o seu caso, talvez tenha que esperar alguns dias para a validação.</p>
+<h2>Download</h2>
+<p>Após a validação você fará login e então, clicando em <strong>Account</strong> no canto superior direito da tela:
+<img 400px_="400px;" alt="Passo 1" auto="auto" height:="height:" src="{Passo" style="'width:" title="1}/images/canopy_install0.png" /></p>
+<p>Depois vá na seção Downloads:</p>
+<p><img 400px_="400px;" alt="Passo 2" auto="auto" height:="height:" src="/images/canopy_install1.png" style="'width:" /></p>
+<p>E clique para baixar o Canopy:</p>
+<p><img alt="Passo 3" src="/images/canopy_install2.png" style="width: 600px; height: auto" /></p>
+<h2>Instalação do Canopy</h2>
+<p>Uma das formas de organizar os programas instalados no Linux é criar uma pasta em sua <em>/home</em> para abrigar os programas e seus instaladores, evitando que sua <em>/home</em> se encha de diretórios.</p>
+<div class="highlight"><pre>  mkdir /home/username/Programs/Enthought/Canopy
+</pre></div>
+
+
+<p>Este comando criará tanto o diretório Programs como também o diretório Enthought, onde será instalado o Canopy. Agora copie o o instalador do Canopy para a pasta Enthought, acesse-a com o terminal e rode:</p>
+<div class="highlight"><pre>  bash canopy-1.6.2-rh5-64.sh
+</pre></div>
+
+
+<p>O nome do instalador pode variar com a versão ou máquina que você estiver usando.
+Aceite os termos e então escreva o caminho para o diretório Canopy criado no comando anterior:</p>
+<p><img alt="Passo 4" src="/images/canopy_install3.png" style="width: 600px; height: auto" /></p>
+<p>Após a instalação, abra o Canopy:</p>
+<p><img alt="Passo 5" src="/images/canopy_install4.png" style="width: 600px; height: auto" /></p>
+<p>Aceite que o Canopy seja o <em>Default</em> do sistema operacional para abrir arquivos em python e logue-se com sua conta acadêmica:</p>
+<p><img alt="Passo 6" src="/images/canopy_install5.png" style="width: 600px; height: auto" /></p>
+<p>Agora precisamos ativar o <strong>pip</strong> para instalar pacotes no Canopy. O <strong>pip</strong> é um repositório de pacotes em <em>Python</em>. Para isso execute os seguintes comandos no terminal:</p>
+<div class="highlight"><pre>  enpkg setuptools
+  enpkg pip
+</pre></div>
+
+
+<h2>Instalação dos módulos necessários</h2>
+<p>Agora que temos o Canopy instalado precisamos instalar os módulos em python que serão utilizados nos tutoriais. Para isso, abra o Canopy a pasta e acesse o <em>Package Manager</em>. Dentro deste, certifique-se que está logado e então procure por <em>netcdf</em>:</p>
+<p>Instale todos os pacotes assinalados:</p>
+<p><img alt="Passo 7" src="/images/canopy_install7.png" style="width: 600px; height: auto" /></p>
+<p>Crtifique-se que todos estão com o selo verde:</p>
+<p><img alt="Passo 8" src="/images/canopy_install8.png" style="width: 600px; height: auto" /></p>
+<p>Agora procure por <em>basemap</em> e instale os dois pacotes que aparecem:</p>
+<p><img alt="Passo 9" src="/images/canopy_install9.png" style="width: 600px; height: auto" /></p>
+<p>Agora acesse a pasta <em>/Programs</em> em seu <em>/home</em> e execute o seguinte comando para baixar os módulos OceanLab:</p>
+<div class="highlight"><pre>  git clone https://github.com/iuryt/OceanLab.git
+  cd OceanLab/
+</pre></div>
+
+
+<p>Agora execute o seguinte comando para instalar os módulos:</p>
+<div class="highlight"><pre>  python setup.py install
+</pre></div>
+
+
+<h2>Certificando-se que tudo foi instalado</h2>
+<p>Abra o <em>Editor</em> do Canopy, vá para a janela que tenha escrito <em>"Welcome to Canopy's interactive data-analysis environment!
+"</em> e execute os seguintes comandos:</p>
+<div class="highlight"><pre>  <span class="kn">from</span> <span class="nn">OceanLab</span> <span class="kn">import</span> <span class="o">*</span>
+  <span class="kn">from</span> <span class="nn">mpl_toolkits.basemap</span> <span class="kn">import</span> <span class="n">Basemap</span>
+  <span class="kn">import</span> <span class="nn">pandas</span>
+  <span class="kn">import</span> <span class="nn">numpy</span>
+  <span class="kn">import</span> <span class="nn">scipy</span>
+  <span class="kn">import</span> <span class="nn">matplotlib</span>
+</pre></div>
+
+
+<p>Se não ocorrer nenhum erro é porque foi tudo instalado corretamente.</p>
+<p><img alt="Passo 10" src="/images/canopy_install10.png" style="width: 600px; height: auto" />     </p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="https://ocefpaf.github.io/python4oceanographers/">Python4Oceanographers</a></li>
+                            <li><a href="http://pyaos.johnny-lin.com/">PyAOS</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
